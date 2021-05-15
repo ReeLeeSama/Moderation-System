@@ -1,15 +1,11 @@
 import discord
-import datetime
 import asyncio
-import time_str
 
-from datetime import datetime
-from discord.ext import commands,tasks
+from discord.ext import commands
 
 intents=discord.Intents.all()
 client = commands.Bot(command_prefix="!",intents=intents)
 client.launch_time = datetime.utcnow()
-client.remove_command('help')
 
 @client.event
 async def on_ready():
