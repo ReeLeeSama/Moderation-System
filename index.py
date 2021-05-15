@@ -89,7 +89,7 @@ async def kick(ctx,member:discord.Member,reason=None):
 
 @client.command()
 @commands.has_permissions(ban_members=True)
-async def kick(ctx,member:discord.Member,reason=None):
+async def ban(ctx,member:discord.Member,reason=None):
     if ctx.author == member:
         ur_embed=discord.Embed(title="Error trying to ban",description=f"Unable to ban {member.mention}. Why are you trying to kick yourself?",color=discord.Colour.red())
         await ctx.reply(embed=ur_embed)
